@@ -114,22 +114,62 @@
 // }
 // checkStringsAnagram()
 
-
 // Code 9: Swapping of 2 numbers with third variable
 // let a = 20;
 // let b = 32;
 // let c = a; // c = 20
-// a = b; // a = 32 
+// a = b; // a = 32
 // b = c; // b = 20
 
 // console.log(a);
 // console.log(b);
 
-
 // Code 10: Swapping of 2 numbers without third variable
-let a = 13;
-let b = 24;
-[a, b] = [b, a];
-console.log(a);
-console.log(b);
+// let a = 13;
+// let b = 24;
+// [a, b] = [b, a];
+// console.log(a);
+// console.log(b);
+
+// Code 11: To check the string or number is palindrome or not( ex: 121,madam,anna) using reverse method
+
+// const palindromeCheck = (str, num) => {
+//     let revStr = str.split("").reverse().join("");
+
+//     let revNum = num.toString();
+//     reverseNum = revNum.split("").reverse().join("");
+//     str === revStr ? console.log("Palindrome") : console.log("not a Palindrome");
+//     num === Number(reverseNum) ? console.log("Palindrome") : console.log("not a Palindrome");
+// }
+// palindromeCheck("mom" , 212);
+
+// To check the string or number is palindrome or not( ex: 121,madam,anna) using dividing length by 2 and then comparing function checkPalindrome
+
+// let palindromeCheck = (str) => {
+//     let len = str.length;
+//     for(let i=0 ; i<len/2; i++){
+//         str[i] !== str[len-1-i] ? console.log("not Palindrome") : console.log("palindrome");
+//     }
+// }
+// palindromeCheck("saras")
+
+// Code 13: To find longest word from a string using (for of) for(var i=0; i>=num; i++) means iterate by indexing for (var word of words) means iterate by an elements not by indexing
+
+// const longestWord = (str) => {
+//   let longest = "";
+//   let word = str.split(" ");
+//   word.forEach((elem) => {
+//     if (elem.length > longest.length) {
+//       longest = elem;
+//     }
+//   });
+//   console.log(longest.length);
+//   word.forEach((word) => {
+//      if(word.length === longest.length) {
+//         console.log(word);
+//      }
+//   })
+// };
+// longestWord("my name is sagar rajesh bendale");
+
 
