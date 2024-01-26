@@ -201,16 +201,99 @@
 // };
 // checkCount("sare icecream to jarur khayenge");
 
-
 // Code 18: To find character occurance from the string
-let indx = 0
-const checkOcc = (str, char) => {
-    for(let letter of str) {
-        if(char.includes(letter)){
-            indx++
-            str.indexOf(letter);
+// let occTime = 0;
+// let index = 0;
+// const checkOcc = (str, char) => {
+//   for (let letter of str) {
+//     if (char.includes(letter)) {
+//       occTime++;
+//       index = str.indexOf(letter);
+//     }
+//   }
+//   console.log(`Character found at index - ${index} and it occurs ${occTime} times`);
+// };
+// checkOcc("sagarBendale", "a");
+
+// Code 19: To find a first pair whose sum is zero
+// let findPair = (arr) => {
+//    for(let first of arr) {
+//     for(let i = 1; i<arr.length; i++) {
+//        if(first + arr[i] === 0) {
+//         console.log(first, arr[i]);
+//        }
+//     }
+//    }
+// }
+// findPair([-3,-4,0,-6,-2,-1,-2,2,4,-6,8]);
+
+// Code 20: To find a first pair whose sum is zero using indexing //Firstly do a sort here
+// function getSumPairZero(array)
+// {
+//   let left = 0;
+//   let right = array.length-1;
+//   while(left<right)
+//   {
+//     sum = array[left]+array[right]
+//     if(sum===0){
+//        return [array[left],array[right]]
+//     }else if(sum>0){
+//       right--;
+//     }else{
+//       left++;
+//     }
+//   }
+// }
+// const result = getSumPairZero([-5,-4,-3,-2,-1,0,2,4,6,8])
+// console.log(result)
+
+// Code 24: Fibonacci Series (0,1,1,2,3,5,8,13....)
+// let arr = [];
+// let n1 = 0;
+// let n2 = 1;
+// arr.push(n1);
+// arr.push(n2);
+// let nextItem;
+// let fib = (n) => {
+//   for (i = 0; i <= n; i++) {
+//     nextItem = n1 + n2;
+//     n1 = n2;
+//     n2 = nextItem;
+//     arr.push(nextItem);
+//   }
+//   console.log(arr);
+// };
+// fib(10);
+
+// Code 26: Finding a missing elements in an array and then add with existing elements.
+// let findMissing = (arr) => {
+//     let newArr = arr.sort((a, b) => a-b);
+//     let missing = [];
+//     let max = Math.max(...arr);
+//     console.log(newArr);
+//     for(i = 1; i <= max; i++) {
+//         if(arr.indexOf(i) == -1){
+//             missing.push(i);
+//         }
+//     }
+//     console.log(arr.concat(missing).sort((a,b)=> a-b));
+// }
+
+// findMissing([2,4,16,18,10,12,14]);
+
+// Code 33: Find first duplicate element from an array of Numbers
+
+function firstDuplicate() {
+    let arr = [1,2,2,5,5];
+    let data = {};
+    for (var item of arr) {
+        if (data[item]) {
+            return item
+        } else {
+            data[item] = item
+            console.log(data[item])
         }
     }
-    console.log(`haracter found at index - ${index} and it occurs ${indx} times`);
+    return -1
 }
-checkOcc("sagarBendale", "d");
+console.log(firstDuplicate()) 
