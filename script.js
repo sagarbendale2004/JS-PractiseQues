@@ -53,7 +53,7 @@
 // another mtd -
 // let str = "SagarBendale";
 // let arr = str.split("");
-// let filters = [...new Set(arr)]
+// let filters = [...new Set(arr)]     // Set is an object
 // console.log(filters);
 
 // Code 2: Remove Duplicate characters from array of element and find the count of an elements using set object
@@ -172,4 +172,45 @@
 // };
 // longestWord("my name is sagar rajesh bendale");
 
+// Ques - To find longest common string from array of strings function longestCommonString
 
+// const longestCommonString = (arr) => {
+//     let sortedArr = arr.sort();
+//     console.log(sortedArr);
+//     let i = 0;
+//     while(sortedArr[0].length > 0 && sortedArr[0].charAt(i)===sortedArr[sortedArr.length-1].charAt(i)){
+//         i++;
+//     }
+//     console.log(sortedArr[0].substring(0, i));
+// }
+
+// longestCommonString(["", "amari", "mburgar", "m", "er"]);
+
+// Code 17: To find vowels and its count in a given string
+
+// const vowels = "a,e,i,o,u";
+// let count = 0;
+// const checkCount = (str) => {
+//   for (let elem of str) {
+//     if (vowels.includes(elem)) {
+//       count++;
+//       console.log(elem);
+//     }
+//   }
+//   console.log(count);
+// };
+// checkCount("sare icecream to jarur khayenge");
+
+
+// Code 18: To find character occurance from the string
+let indx = 0
+const checkOcc = (str, char) => {
+    for(let letter of str) {
+        if(char.includes(letter)){
+            indx++
+            str.indexOf(letter);
+        }
+    }
+    console.log(`haracter found at index - ${index} and it occurs ${indx} times`);
+}
+checkOcc("sagarBendale", "d");
