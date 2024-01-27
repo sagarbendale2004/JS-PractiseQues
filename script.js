@@ -283,17 +283,30 @@
 
 // Code 33: Find first duplicate element from an array of Numbers
 
-function firstDuplicate() {
-    let arr = [1,2,2,5,5];
-    let data = {};
-    for (var item of arr) {
-        if (data[item]) {
-            return item
-        } else {
-            data[item] = item
-            console.log(data[item])
-        }
-    }
-    return -1
-}
-console.log(firstDuplicate()) 
+// function firstDuplicate() {
+//     let arr = [1,2,2,5,5];
+//     let data = {};
+//     for (var item of arr) {
+//         if (data[item]) {
+//             return item
+//         } else {
+//             data[item] = item
+//             console.log(data[item])
+//         }
+//     }
+//     return -1
+// }
+// console.log(firstDuplicate()) 
+
+
+// Code 41: Print string n times using inbuilt function
+
+// const printStr = (str, n) => {
+//     while(n < 1) {
+//         console.log("small no");
+//         break;
+//     }
+//     let rep = str.repeat(n);
+//     console.log("" + rep + "");
+// }
+// printStr("sagar", 10);
